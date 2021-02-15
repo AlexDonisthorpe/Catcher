@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -31,8 +32,12 @@ public class PlayerController : MonoBehaviour
         {
             _destination = transform.position;
         }
-        
-        transform.position = Vector2.MoveTowards(transform.position,_destination, speed * Time.deltaTime);
+    }
+
+    private void FixedUpdate()
+    {
+        float step = speed * Time.deltaTime;
+        transform.position = Vector2.MoveTowards(transform.position,_destination, step);
     }
 
     private Vector3 GetWorldSpacePosition(Vector2 pointerPosition)
