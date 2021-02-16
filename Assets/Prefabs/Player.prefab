@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 5767584609964778030}
   - component: {fileID: 8564611264189927963}
   - component: {fileID: 5569465299307190331}
+  - component: {fileID: 68106742}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -70,6 +71,19 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1.3, y: 0.5}
   m_Direction: 0
+--- !u!114 &68106742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 192701050674929132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f280e9b7a13a4daabe112d29ec0cfd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 4
 --- !u!1 &6378502232610465213
 GameObject:
   m_ObjectHideFlags: 0
@@ -81,7 +95,7 @@ GameObject:
   - component: {fileID: 5017954384740323938}
   - component: {fileID: 5051881764308423489}
   m_Layer: 0
-  m_Name: SF-ST
+  m_Name: Ship
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
