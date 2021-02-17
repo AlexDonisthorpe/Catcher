@@ -414,6 +414,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 192701050674929132, guid: 18442ade516a3496ba5ba81a59659594, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5767584609964778030, guid: 18442ade516a3496ba5ba81a59659594, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -457,6 +461,10 @@ PrefabInstance:
     - target: {fileID: 5767584609964778030, guid: 18442ade516a3496ba5ba81a59659594, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6378502232610465213, guid: 18442ade516a3496ba5ba81a59659594, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18442ade516a3496ba5ba81a59659594, type: 3}
@@ -573,8 +581,16 @@ PrefabInstance:
       value: ShieldEnergy
       objectReference: {fileID: 0}
     - target: {fileID: 2891335822231026971, guid: ac6bbc27879ff43dd932a4a85f4a822d, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2891335822231026971, guid: ac6bbc27879ff43dd932a4a85f4a822d, type: 3}
       propertyPath: m_TagString
       value: Energy
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892343255498652232, guid: ac6bbc27879ff43dd932a4a85f4a822d, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac6bbc27879ff43dd932a4a85f4a822d, type: 3}
@@ -585,9 +601,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1880468425}
     m_Modifications:
+    - target: {fileID: 3418147332650727083, guid: afc6bef132e534719974be6603d75b25, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3687320740536717360, guid: afc6bef132e534719974be6603d75b25, type: 3}
       propertyPath: m_Name
       value: Asteroid
+      objectReference: {fileID: 0}
+    - target: {fileID: 3687320740536717360, guid: afc6bef132e534719974be6603d75b25, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3687320740536717360, guid: afc6bef132e534719974be6603d75b25, type: 3}
       propertyPath: m_TagString

@@ -33,7 +33,7 @@ public class Shield : MonoBehaviour
         currentEnergy++;
         if (currentEnergy % energyPerShield == 0)
         {
-            currentHitsRemaining = Mathf.Clamp(currentHitsRemaining++,0, hitsUntilDeath);
+            currentHitsRemaining = Mathf.Clamp((currentHitsRemaining+1),0, hitsUntilDeath);
         }
     }
 }
