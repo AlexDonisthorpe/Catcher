@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &705795375
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 705795376}
+  m_Layer: 3
+  m_Name: Shields
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &705795376
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705795375}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5767584609964778030}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &192701050674929132
 GameObject:
   m_ObjectHideFlags: 0
@@ -12,7 +42,8 @@ GameObject:
   - component: {fileID: 8564611264189927963}
   - component: {fileID: 5569465299307190331}
   - component: {fileID: 68106742}
-  m_Layer: 0
+  - component: {fileID: 8013079071733380571}
+  m_Layer: 3
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -31,6 +62,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5017954384740323938}
+  - {fileID: 705795376}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -84,6 +116,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
+--- !u!114 &8013079071733380571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 192701050674929132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c32352ea064de40ee88c1ce73033858f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitsUntilDeath: 4
+  energyPerShield: 1
+  currentEnergy: 0
+  currentHitsRemaining: 0
 --- !u!1 &6378502232610465213
 GameObject:
   m_ObjectHideFlags: 0
@@ -94,7 +142,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5017954384740323938}
   - component: {fileID: 5051881764308423489}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ship
   m_TagString: Untagged
   m_Icon: {fileID: 0}
