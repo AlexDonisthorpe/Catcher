@@ -2,11 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 
 public class Shield : MonoBehaviour
 {
-    [SerializeField] float hitsUntilDeath = 4f;
+    [SerializeField] float maxHitsRemaining = 4f;
     [SerializeField] private float energyPerShield = 1f;
+    [SerializeField] private Animator _shieldAnimator;
     
     [Header("Testing")]
     [SerializeField] float currentEnergy = 0;
@@ -14,7 +16,7 @@ public class Shield : MonoBehaviour
 
     private void Awake()
     {
-        currentHitsRemaining = hitsUntilDeath;
+        currentHitsRemaining = maxHitsRemaining;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -22,6 +24,7 @@ public class Shield : MonoBehaviour
         if (other.CompareTag("Obstacle"))
         {
             currentHitsRemaining--;
+            SpeedUpAnimation();
         } else if (other.CompareTag("Energy"))
         {
             UpdateEnergy();
@@ -33,7 +36,25 @@ public class Shield : MonoBehaviour
         currentEnergy++;
         if (currentEnergy % energyPerShield == 0)
         {
-            currentHitsRemaining = Mathf.Clamp((currentHitsRemaining+1),0, hitsUntilDeath);
+            var newHitsRemaining = currentHitsRemaining + 1;
+            if (newHitsRemaining > maxHitsRemaining)
+            {
+                currentHitsRemaining = maxHitsRemaining;
+            }
+            else
+            {
+                currentHitsRemaining = newHitsRemaining;
+                SlowDownAnimation();
+            }
         }
+    }
+
+    private void SpeedUpAnimation()
+    {
+        _shieldAnimator.speed++;
+    }
+    private void SlowDownAnimation()
+    {
+        _shieldAnimator.speed--;
     }
 }
