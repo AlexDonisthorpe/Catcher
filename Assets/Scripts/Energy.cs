@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Energy : MonoBehaviour
 {
+    [SerializeField] int pointsPerEnergy = 100;
+    
     private Animator _animator;
     void Awake()
     {
@@ -21,6 +23,7 @@ public class Energy : MonoBehaviour
 
         if (other.CompareTag("Player"))
         {
+            FindObjectOfType<ScoreTracker>().AddToScore(pointsPerEnergy);
             Destroy(gameObject);
         }
     }

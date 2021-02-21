@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Obstacle : MonoBehaviour
 {
-    [SerializeField] private float pointsPerObstacle = 200f;
+    [SerializeField] private int pointsPerObstacle = 200;
 
     private Animator _animator;
     private void Awake()
@@ -33,6 +33,7 @@ public class Obstacle : MonoBehaviour
     private void SelfDestruct()
     {
         GetComponent<ObjectMovement>().Bounce();
+        FindObjectOfType<ScoreTracker>().AddToScore(pointsPerObstacle);
         _animator.SetTrigger("expl");
         Destroy(gameObject, _animator.GetCurrentAnimatorStateInfo(0).length);
     }
